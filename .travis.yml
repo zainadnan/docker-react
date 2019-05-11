@@ -1,19 +1,11 @@
 sudo: required
 
-env:
-  matrix:
-  - OS_TYPE=centos OS_VERSION=6
-  - OS_TYPE=centos OS_VERSION=7
 
 services:
 
  - docker
 
 before_install:
- 
- - sudo apt-get update
- - sudo docker pull centos:centos${OS_VERSION} 
- 
  - docker build -t zainadnan/docker-react -f Dockerfile.dev .
   
 script:
