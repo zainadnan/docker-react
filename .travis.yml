@@ -9,7 +9,9 @@ before_install:
  - docker build -t zainadnan/docker-react .
  
 
+script:
 
+ - docker run zainadnan/docker-react npm test
 
 
 
