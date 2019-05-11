@@ -18,7 +18,7 @@ before_install:
   
 script:
 
- - docker run zainadnan/docker-react npm run test -- --coverage  
+ - docker run zainadnan/docker-react npm run test 
 
 
 
