@@ -11,6 +11,10 @@ services:
 
 before_install:
  
+ - sudo apt-get update
+  - sudo service docker restart
+  - sleep 5
+  - sudo docker pull centos:centos${OS_VERSION} 
  - echo "BEFORE INSTALL START"
  - gem install bundler
  - echo "BEFORE INSTALL END"
